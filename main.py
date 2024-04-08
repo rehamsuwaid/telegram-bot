@@ -1,6 +1,5 @@
 from typing import Final
 from telegram import Update
-import json
 from web3 import Web3
 from jsonABI import function_signature_to_abi
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
@@ -49,12 +48,14 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Responses
 def handle_response(text: str) -> str:
     processed: str = text.lower()
-    if 'hello' | 'hi' in text:
-        return 'hi there!'
+    if 'hello' in text or 'hi' in text or 'hey' in text or 'hola' in text:
+        return 'Hi there!'
     if 'how are you' in text:
         return 'Good :)'
     if 'sup' in text:
-        'nm rly'
+        return 'nm rly'
+
+    return 'I do not understand what you wrote....'
 
 
 async def handle_message(update: Update, contect: ContextTypes.DEFAULT_TYPE):
