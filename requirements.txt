@@ -1,5 +1,5 @@
-pip install telegram
-pip install requests
-pip install web3
-pip install telegram.ext
-pip install typing
+telegram
+requests
+web3
+telegram.ext
+typing
