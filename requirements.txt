@@ -1,5 +1,3 @@
-telegram
-requests
-web3
-telegram.ext
-typing
+telegram==0.0.1
+requests==2.31.0
+web3==6.16.0
